@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Delivery Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Grocery Delivery Application</h1>
+    
+    <!-- Grocery Items List -->
+    <div class="grocery-list">
+      <h2>Available Items</h2>
+      <div class="items">
+        <!-- Each item will have a button to add it to the cart -->
+        <div class="item">
+          <p>Apples - Rs 2.00</p>
+          <button onclick="addToCart('Apples', 2.00)">Add to Cart</button>
+        </div>
+        <div class="item">
+          <p>Bananas - Rs 1.50</p>
+          <button onclick="addToCart('Bananas', 1.50)">Add to Cart</button>
+        </div>
+        <div class="item">
+          <p>Carrots - Rs 1.00</p>
+          <button onclick="addToCart('Carrots', 1.00)">Add to Cart</button>
+        </div>
+        <div class="item">
+          <p>Bread - Rs 3.00</p>
+          <button onclick="addToCart('Bread', 3.00)">Add to Cart</button>
+        </div>
+        <div class="item">
+          <p>Milk - Rs 2.50</p>
+          <button onclick="addToCart('Milk', 2.50)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart">
+      <h2>Shopping Cart</h2>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Items added to the cart will display here -->
+        </tbody>
+      </table>
+
+      <!-- Total Price and Order Button -->
+      <div class="cart-summary">
+        <h3>Total Price: Rs <span id="total-price">0.00</span></h3>
+        <button onclick="placeOrder()">Place Order</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
